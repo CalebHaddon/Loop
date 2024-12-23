@@ -1,0 +1,51 @@
+[gd_scene load_steps=6 format=3 uid="uid://dpcj2ukshcxvj"]
+
+[ext_resource type="Texture2D" uid="uid://csrdi6fen8hvi" path="res://pooclock.png" id="1_l7ba7"]
+[ext_resource type="Script" path="res://hud.gd" id="1_utc1h"]
+[ext_resource type="Script" path="res://LoopTimer.gd" id="2_tmqli"]
+[ext_resource type="Texture2D" uid="uid://dokwc7arstvse" path="res://button2.png" id="3_t8o6t"]
+[ext_resource type="Script" path="res://Button.gd" id="4_xa1bf"]
+
+[node name="HUD" type="Node2D"]
+script = ExtResource("1_utc1h")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Panel" type="Panel" parent="CanvasLayer"]
+offset_left = 40.0
+offset_right = 80.0
+offset_bottom = 40.0
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Panel"]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 68.0
+offset_bottom = 68.0
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_l7ba7")
+
+[node name="Label" type="Label" parent="CanvasLayer/Panel/TextureRect"]
+layout_mode = 0
+offset_left = 11.0
+offset_top = 20.0
+offset_right = 51.0
+offset_bottom = 43.0
+horizontal_alignment = 1
+script = ExtResource("2_tmqli")
+
+[node name="Panel2" type="Panel" parent="CanvasLayer"]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Button" type="Button" parent="CanvasLayer/Panel2"]
+layout_mode = 0
+offset_left = -16.0
+offset_top = -16.0
+offset_right = 56.0
+offset_bottom = 56.0
+scale = Vector2(0.5, 0.5)
+pivot_offset = Vector2(36, 36)
+icon = ExtResource("3_t8o6t")
+icon_alignment = 1
+script = ExtResource("4_xa1bf")

@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://dfix6c0c5jecc"]
+
+[ext_resource type="Texture2D" uid="uid://ci1x8648tejt4" path="res://key.png" id="1_wxgjt"]
+[ext_resource type="Script" path="res://key.gd" id="2_f48fj"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_iq2f4"]
+
+[node name="Key" type="Area2D"]
+z_index = 1
+monitorable = false
+script = ExtResource("2_f48fj")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = 1
+texture_filter = 1
+texture = ExtResource("1_wxgjt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+z_index = 1
+position = Vector2(0, 9)
+shape = SubResource("CircleShape2D_iq2f4")

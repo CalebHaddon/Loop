@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://6wxm8oc2i323"]
+
+[ext_resource type="PackedScene" uid="uid://bnjc2wrtditvd" path="res://LoopMap.tscn" id="1_oblq3"]
+
+[node name="Loop" type="Node2D"]
+
+[node name="TileMap" parent="." instance=ExtResource("1_oblq3")]

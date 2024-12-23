@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://b8sb5mu4rs7e8"]
+
+[ext_resource type="Texture2D" uid="uid://dl8v4dbbwpq3k" path="res://door.png" id="1_i7of3"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = 1
+texture_filter = 1
+texture = ExtResource("1_i7of3")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+position = Vector2(-9.5, 29.5)
+scale = Vector2(0.95, 0.75)
+polygon = PackedVector2Array(-16.3158, -0.666668, -3.68421, 7.33333, 16.3158, -6, 3.68421, -14)

@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://bu2frmcfceckd"]
+
+[ext_resource type="Texture2D" uid="uid://dokwc7arstvse" path="res://button2.png" id="1_fmiah"]
+[ext_resource type="Script" path="res://Button.gd" id="2_ub7gy"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Button" type="Button" parent="Panel"]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+icon = ExtResource("1_fmiah")
+script = ExtResource("2_ub7gy")

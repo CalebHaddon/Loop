@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://xudehvyewc6m"]
+
+[ext_resource type="Texture2D" uid="uid://blij3lncsjj5a" path="res://expiredcell.png" id="1_iqeur"]
+
+[node name="CellExpired" type="Sprite2D"]
+texture = ExtResource("1_iqeur")

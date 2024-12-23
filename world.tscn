@@ -1,0 +1,25 @@
+[gd_scene load_steps=6 format=3 uid="uid://cxmshryks7dvx"]
+
+[ext_resource type="Script" path="res://gameloop.gd" id="1_fwy5s"]
+[ext_resource type="PackedScene" uid="uid://cyjs3aax6dc7h" path="res://player.tscn" id="2_sqbqm"]
+[ext_resource type="PackedScene" uid="uid://k2jx1lvj14jl" path="res://LoopMapCloset.tscn" id="4_go32v"]
+[ext_resource type="PackedScene" uid="uid://dpcj2ukshcxvj" path="res://hud.tscn" id="4_t7adp"]
+[ext_resource type="PackedScene" uid="uid://bnjc2wrtditvd" path="res://LoopMap.tscn" id="5_n6qmm"]
+
+[node name="World" type="Node2D"]
+script = ExtResource("1_fwy5s")
+
+[node name="Player" parent="." instance=ExtResource("2_sqbqm")]
+y_sort_enabled = true
+position = Vector2(288, 112)
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+position = Vector2(0, -16)
+drag_horizontal_enabled = true
+drag_vertical_enabled = true
+
+[node name="HUD" parent="." instance=ExtResource("4_t7adp")]
+
+[node name="LoopMapCloset" parent="." instance=ExtResource("4_go32v")]
+
+[node name="LoopMap" parent="." instance=ExtResource("5_n6qmm")]
